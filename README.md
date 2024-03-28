@@ -73,6 +73,4 @@ You may use any of the standard packages included in Node.js or any third-party 
 - https://devcenter.heroku.com/articles/config-vars 
 - https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1e37a1a45fd828a9cb10)
-
-https://www.postman.com/dark-shadow-510036/workspace/csci3916-al-24/environment/25557902-ae908eb7-0806-454c-8525-7e22bd9c2c35?action=share&creator=25557902&active-environment=25557902-ae908eb7-0806-454c-8525-7e22bd9c2c35
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/25557902-e348823c-a296-409c-9d25-9dbb307c715a?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D25557902-e348823c-a296-409c-9d25-9dbb307c715a%26entityType%3Dcollection%26workspaceId%3D02770e3b-a857-47a1-b416-fdc4e2c855c2#?env%5BAl-HW2-3916%5D=W3sia2V5IjoiSldUIiwidmFsdWUiOiIiLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiYW55Iiwic2Vzc2lvblZhbHVlIjoibnVsbCIsInNlc3Npb25JbmRleCI6MH1d)
