@@ -136,10 +136,6 @@ router.route('/movies')
             "headers": req.headers,
             "query": req.query,
             "env": process.env.UNIQUE_KEY
-
-
-
-
         });
 
     })
