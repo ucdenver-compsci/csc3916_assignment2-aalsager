@@ -93,9 +93,97 @@ router.route('/testcollection')
         res.json(o);
     }
     );
+
+router.route('/movies')
+
+    .get( function(req,res)  {
+
+        console.log(req.body);
+
+        res.status(200);
+
+        if(req.get('Content_type')){
+            res=res.type(req.get('Content-Type'));
+        }
+
+        var o= getJSONObjectForMovieRequirement(req);
+
+        res.json({
+            "status": 200,
+            "message":"GET movies",
+            "headers": req.headers,
+            "query": req.query,
+            "env": process.env.UNIQUE_KEY
+        });
+
+
+    })
+    
+    .post( function(req,res) {
+
+        console.log(req.body);
+
+        res.status(200);
+        
+        if(req.get('Content-Type')) {
+            res = res.type(req.get('Content-Type'));
+        }
+        var o = getJSONObjectForMovieRequirement(req);
+        res.json({
+
+            "status": 200,
+            "message":"movie saved",
+            "headers": req.headers,
+            "query": req.query,
+            "env": process.env.UNIQUE_KEY
+
+
+
+
+        });
+
+    })
+
+    .delete(authController.isAuthenticated, (req, res) => {
+        console.log(req.body);
+        res = res.status(200).json({
+
+            status: 200,
+            message: 'movie deleted',
+            headers: req.headers,
+            query: req.query,
+            env: process.env.UNIQUE_KEY
+        });;
+        if (req.get('Content-Type')) {
+            res = res.type(req.get('Content-Type'));
+        }
+        var o = getJSONObjectForMovieRequirement(req);
+        res.json(o);
+    }
+    )
+
+    .put(authJwtController.isAuthenticated, (req, res) => {
+        console.log(req.body);
+        res = res.status(200).json({
+
+            status: 200,
+            message: 'movie updated',
+            headers: req.headers,
+            query: req.query,
+            env: process.env.UNIQUE_KEY
+        });
+        if (req.get('Content-Type')) {
+            res = res.type(req.get('Content-Type'));
+        }
+        var o = getJSONObjectForMovieRequirement(req);
+        res.json(o);
+    })
+
+    .all(function(req,res){
+
+        res.status(405).json('Does not support the HTTP method');
+    });
     
 app.use('/', router);
-app.listen(process.env.PORT || 8000);
+app.listen(process.env.PORT || 8080);
 module.exports = app; // for testing only
-
-
